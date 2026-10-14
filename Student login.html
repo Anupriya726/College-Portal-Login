@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Login</title>
+    <style>
+        body {
+            background-color: lightyellow;
+            text-align: center;
+            font-family: Arial;
+        }
+        h1 {
+            color: darkgreen;
+        }
+        .box {
+            background-color: white;
+            padding: 30px;
+            margin: 100px auto;
+            width: 300px;
+            border-radius: 15px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+        }
+        button {
+            background-color: green;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>STUDENT LOGIN</h1>
+        <input id="u" placeholder="Username"><br>
+        <input id="p" type="password" placeholder="Password"><br>
+        <button onclick="login()">SUBMIT</button>
+    </div>
+
+    <script>
+        function login() {
+            if (u.value == "student" && p.value == "1234") {
+                localStorage.setItem("role", "student");
+                document.body.innerHTML =
+                    "<h1>STUDENT DASHBOARD</h1>";
+            } else {
+                alert("Invalid Login");
+            }
+        }
+    </script>
+</body>
+</html>
